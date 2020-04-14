@@ -6,10 +6,8 @@ import { Component, Prop, h } from '@stencil/core';
  
 })
 
-export class Text {
-  /**
-   * The first name
-   */
+export class MyWelcomeText {
+  
   @Prop() content: string;
 
   

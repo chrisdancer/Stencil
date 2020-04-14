@@ -20,6 +20,20 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyFooter {
+    }
+    interface MyText {
+        /**
+          * The first name
+         */
+        "content": string;
+    }
+    interface MyWelcometext {
+        /**
+          * The first name
+         */
+        "content": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +42,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
+    }
+    var HTMLMyFooterElement: {
+        prototype: HTMLMyFooterElement;
+        new (): HTMLMyFooterElement;
+    };
+    interface HTMLMyTextElement extends Components.MyText, HTMLStencilElement {
+    }
+    var HTMLMyTextElement: {
+        prototype: HTMLMyTextElement;
+        new (): HTMLMyTextElement;
+    };
+    interface HTMLMyWelcometextElement extends Components.MyWelcometext, HTMLStencilElement {
+    }
+    var HTMLMyWelcometextElement: {
+        prototype: HTMLMyWelcometextElement;
+        new (): HTMLMyWelcometextElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "my-footer": HTMLMyFooterElement;
+        "my-text": HTMLMyTextElement;
+        "my-welcometext": HTMLMyWelcometextElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +82,25 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyFooter {
+    }
+    interface MyText {
+        /**
+          * The first name
+         */
+        "content"?: string;
+    }
+    interface MyWelcometext {
+        /**
+          * The first name
+         */
+        "content"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "my-footer": MyFooter;
+        "my-text": MyText;
+        "my-welcometext": MyWelcometext;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +108,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
+            "my-text": LocalJSX.MyText & JSXBase.HTMLAttributes<HTMLMyTextElement>;
+            "my-welcometext": LocalJSX.MyWelcometext & JSXBase.HTMLAttributes<HTMLMyWelcometextElement>;
         }
     }
 }
