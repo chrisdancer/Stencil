@@ -8,6 +8,6 @@ import { Component, h } from '@stencil/core';
 export class MyFooter {
 
   render() {
-    return <div><a href=""><p>Impressum</p></a></div>;
+    return <div><a href="impressum.html"><p>Impressum</p></a></div>;
   }
 }
