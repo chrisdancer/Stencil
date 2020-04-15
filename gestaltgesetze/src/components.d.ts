@@ -20,6 +20,24 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyFooter {
+    }
+    interface MyHeadline {
+        "articleH": string;
+        "nameH": string;
+    }
+    interface MySubheadline {
+        "article": string;
+        "name": string;
+    }
+    interface MyText {
+        /**
+          * The first name
+         */
+        "content": string;
+    }
+    interface TestComponent {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +46,43 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
+    }
+    var HTMLMyFooterElement: {
+        prototype: HTMLMyFooterElement;
+        new (): HTMLMyFooterElement;
+    };
+    interface HTMLMyHeadlineElement extends Components.MyHeadline, HTMLStencilElement {
+    }
+    var HTMLMyHeadlineElement: {
+        prototype: HTMLMyHeadlineElement;
+        new (): HTMLMyHeadlineElement;
+    };
+    interface HTMLMySubheadlineElement extends Components.MySubheadline, HTMLStencilElement {
+    }
+    var HTMLMySubheadlineElement: {
+        prototype: HTMLMySubheadlineElement;
+        new (): HTMLMySubheadlineElement;
+    };
+    interface HTMLMyTextElement extends Components.MyText, HTMLStencilElement {
+    }
+    var HTMLMyTextElement: {
+        prototype: HTMLMyTextElement;
+        new (): HTMLMyTextElement;
+    };
+    interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
+    }
+    var HTMLTestComponentElement: {
+        prototype: HTMLTestComponentElement;
+        new (): HTMLTestComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "my-footer": HTMLMyFooterElement;
+        "my-headline": HTMLMyHeadlineElement;
+        "my-subheadline": HTMLMySubheadlineElement;
+        "my-text": HTMLMyTextElement;
+        "test-component": HTMLTestComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +100,31 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyFooter {
+    }
+    interface MyHeadline {
+        "articleH"?: string;
+        "nameH"?: string;
+    }
+    interface MySubheadline {
+        "article"?: string;
+        "name"?: string;
+    }
+    interface MyText {
+        /**
+          * The first name
+         */
+        "content"?: string;
+    }
+    interface TestComponent {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "my-footer": MyFooter;
+        "my-headline": MyHeadline;
+        "my-subheadline": MySubheadline;
+        "my-text": MyText;
+        "test-component": TestComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +132,11 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
+            "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
+            "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
+            "my-text": LocalJSX.MyText & JSXBase.HTMLAttributes<HTMLMyTextElement>;
+            "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
         }
     }
 }
