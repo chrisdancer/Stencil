@@ -7,7 +7,7 @@ export function format(first: string, middle: string, last: string): string {
   );
 }
 
-export function formatSubheadline(article: string, name: string): string {
+export function formatHeadline(article: string, name: string): string {
   return (
     (article || '') +
     (name ? ` ${name}` : '')

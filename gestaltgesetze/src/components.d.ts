@@ -26,6 +26,8 @@ export namespace Components {
         "articleH": string;
         "nameH": string;
     }
+    interface MyNav {
+    }
     interface MySubheadline {
         "article": string;
         "name": string;
@@ -34,6 +36,9 @@ export namespace Components {
         /**
           * The first name
          */
+        "content": string;
+    }
+    interface MyWelcometext {
         "content": string;
     }
     interface TestComponent {
@@ -58,6 +63,12 @@ declare global {
         prototype: HTMLMyHeadlineElement;
         new (): HTMLMyHeadlineElement;
     };
+    interface HTMLMyNavElement extends Components.MyNav, HTMLStencilElement {
+    }
+    var HTMLMyNavElement: {
+        prototype: HTMLMyNavElement;
+        new (): HTMLMyNavElement;
+    };
     interface HTMLMySubheadlineElement extends Components.MySubheadline, HTMLStencilElement {
     }
     var HTMLMySubheadlineElement: {
@@ -70,6 +81,12 @@ declare global {
         prototype: HTMLMyTextElement;
         new (): HTMLMyTextElement;
     };
+    interface HTMLMyWelcometextElement extends Components.MyWelcometext, HTMLStencilElement {
+    }
+    var HTMLMyWelcometextElement: {
+        prototype: HTMLMyWelcometextElement;
+        new (): HTMLMyWelcometextElement;
+    };
     interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
     }
     var HTMLTestComponentElement: {
@@ -80,8 +97,10 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-footer": HTMLMyFooterElement;
         "my-headline": HTMLMyHeadlineElement;
+        "my-nav": HTMLMyNavElement;
         "my-subheadline": HTMLMySubheadlineElement;
         "my-text": HTMLMyTextElement;
+        "my-welcometext": HTMLMyWelcometextElement;
         "test-component": HTMLTestComponentElement;
     }
 }
@@ -106,6 +125,8 @@ declare namespace LocalJSX {
         "articleH"?: string;
         "nameH"?: string;
     }
+    interface MyNav {
+    }
     interface MySubheadline {
         "article"?: string;
         "name"?: string;
@@ -116,14 +137,19 @@ declare namespace LocalJSX {
          */
         "content"?: string;
     }
+    interface MyWelcometext {
+        "content"?: string;
+    }
     interface TestComponent {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "my-footer": MyFooter;
         "my-headline": MyHeadline;
+        "my-nav": MyNav;
         "my-subheadline": MySubheadline;
         "my-text": MyText;
+        "my-welcometext": MyWelcometext;
         "test-component": TestComponent;
     }
 }
@@ -134,8 +160,10 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
+            "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
             "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
             "my-text": LocalJSX.MyText & JSXBase.HTMLAttributes<HTMLMyTextElement>;
+            "my-welcometext": LocalJSX.MyWelcometext & JSXBase.HTMLAttributes<HTMLMyWelcometextElement>;
             "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
         }
     }
