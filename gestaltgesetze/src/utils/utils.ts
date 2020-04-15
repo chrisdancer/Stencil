@@ -6,3 +6,10 @@ export function format(first: string, middle: string, last: string): string {
     (last ? ` ${last}` : '')
   );
 }
+
+export function formatHeadline(article: string, name: string): string {
+  return (
+    (article || '') +
+    (name ? ` ${name}` : '')
+  );
+}
