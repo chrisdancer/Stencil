@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { formatSubheadline } from '../../utils/utils';
+import { formatHeadline } from '../../utils/utils';
 
 @Component({
   tag: 'my-headline',
@@ -8,14 +8,14 @@ import { formatSubheadline } from '../../utils/utils';
 })
 export class MyHeadline {
   //article of the gestalt law
-  @Prop() articleH: string;
+  @Prop() article: string;
 
   //name of the gestalt law
-  @Prop() nameH: string;
+  @Prop() name: string;
 
 
   private getText(): string {
-    return formatSubheadline(this.articleH, this.nameH);
+    return formatHeadline(this.article, this.name);
   }
 
   render() {
