@@ -9,8 +9,7 @@
 
 | Property  | Attribute | Description | Type     | Default     |
 | --------- | --------- | ----------- | -------- | ----------- |
-| `article` | `article` |             | `string` | `undefined` |
-| `name`    | `name`    |             | `string` | `undefined` |
+| `content` | `content` |             | `string` | `undefined` |
 
 
 ----------------------------------------------
