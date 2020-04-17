@@ -23,6 +23,20 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyFlexdiv {
+        /**
+          * The first name
+         */
+        "first": string;
+        /**
+          * The last name
+         */
+        "last": string;
+        /**
+          * The middle name
+         */
+        "middle": string;
+    }
     interface MyFooter {
     }
     interface MyHeadline {
@@ -56,6 +70,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLMyFlexdivElement extends Components.MyFlexdiv, HTMLStencilElement {
+    }
+    var HTMLMyFlexdivElement: {
+        prototype: HTMLMyFlexdivElement;
+        new (): HTMLMyFlexdivElement;
     };
     interface HTMLMyFooterElement extends Components.MyFooter, HTMLStencilElement {
     }
@@ -96,6 +116,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
+        "my-flexdiv": HTMLMyFlexdivElement;
         "my-footer": HTMLMyFooterElement;
         "my-headline": HTMLMyHeadlineElement;
         "my-nav": HTMLMyNavElement;
@@ -109,6 +130,20 @@ declare namespace LocalJSX {
         "content"?: string;
     }
     interface MyComponent {
+        /**
+          * The first name
+         */
+        "first"?: string;
+        /**
+          * The last name
+         */
+        "last"?: string;
+        /**
+          * The middle name
+         */
+        "middle"?: string;
+    }
+    interface MyFlexdiv {
         /**
           * The first name
          */
@@ -145,6 +180,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "my-button": MyButton;
         "my-component": MyComponent;
+        "my-flexdiv": MyFlexdiv;
         "my-footer": MyFooter;
         "my-headline": MyHeadline;
         "my-nav": MyNav;
@@ -159,6 +195,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-flexdiv": LocalJSX.MyFlexdiv & JSXBase.HTMLAttributes<HTMLMyFlexdivElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
             "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
