@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface MyButton {
+        "content": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +25,15 @@ export namespace Components {
     }
     interface MyFooter {
     }
+    interface MyHeadline {
+        "article": string;
+        "name": string;
+    }
+    interface MyNav {
+    }
+    interface MySubheadline {
+        "content": string;
+    }
     interface MyText {
         /**
           * The first name
@@ -29,13 +41,16 @@ export namespace Components {
         "content": string;
     }
     interface MyWelcometext {
-        /**
-          * The first name
-         */
         "content": string;
     }
 }
 declare global {
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    }
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -47,6 +62,24 @@ declare global {
     var HTMLMyFooterElement: {
         prototype: HTMLMyFooterElement;
         new (): HTMLMyFooterElement;
+    };
+    interface HTMLMyHeadlineElement extends Components.MyHeadline, HTMLStencilElement {
+    }
+    var HTMLMyHeadlineElement: {
+        prototype: HTMLMyHeadlineElement;
+        new (): HTMLMyHeadlineElement;
+    };
+    interface HTMLMyNavElement extends Components.MyNav, HTMLStencilElement {
+    }
+    var HTMLMyNavElement: {
+        prototype: HTMLMyNavElement;
+        new (): HTMLMyNavElement;
+    };
+    interface HTMLMySubheadlineElement extends Components.MySubheadline, HTMLStencilElement {
+    }
+    var HTMLMySubheadlineElement: {
+        prototype: HTMLMySubheadlineElement;
+        new (): HTMLMySubheadlineElement;
     };
     interface HTMLMyTextElement extends Components.MyText, HTMLStencilElement {
     }
@@ -61,13 +94,20 @@ declare global {
         new (): HTMLMyWelcometextElement;
     };
     interface HTMLElementTagNameMap {
+        "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
         "my-footer": HTMLMyFooterElement;
+        "my-headline": HTMLMyHeadlineElement;
+        "my-nav": HTMLMyNavElement;
+        "my-subheadline": HTMLMySubheadlineElement;
         "my-text": HTMLMyTextElement;
         "my-welcometext": HTMLMyWelcometextElement;
     }
 }
 declare namespace LocalJSX {
+    interface MyButton {
+        "content"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -84,6 +124,15 @@ declare namespace LocalJSX {
     }
     interface MyFooter {
     }
+    interface MyHeadline {
+        "article"?: string;
+        "name"?: string;
+    }
+    interface MyNav {
+    }
+    interface MySubheadline {
+        "content"?: string;
+    }
     interface MyText {
         /**
           * The first name
@@ -91,14 +140,15 @@ declare namespace LocalJSX {
         "content"?: string;
     }
     interface MyWelcometext {
-        /**
-          * The first name
-         */
         "content"?: string;
     }
     interface IntrinsicElements {
+        "my-button": MyButton;
         "my-component": MyComponent;
         "my-footer": MyFooter;
+        "my-headline": MyHeadline;
+        "my-nav": MyNav;
+        "my-subheadline": MySubheadline;
         "my-text": MyText;
         "my-welcometext": MyWelcometext;
     }
@@ -107,8 +157,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
+            "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
+            "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
+            "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
             "my-text": LocalJSX.MyText & JSXBase.HTMLAttributes<HTMLMyTextElement>;
             "my-welcometext": LocalJSX.MyWelcometext & JSXBase.HTMLAttributes<HTMLMyWelcometextElement>;
         }
