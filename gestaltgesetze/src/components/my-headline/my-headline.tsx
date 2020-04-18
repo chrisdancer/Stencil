@@ -19,6 +19,19 @@ export class MyHeadline {
   }
 
   render() {
-    return <h1>Gesetz {this.getText()}</h1>;
+    let url = window.location.href;
+    let newString = url.replace(/(http\:\/\/localhost\:\d{4}\/html)(\/)(\w*\.html)/, "$3"); 
+    url = newString;
+
+    if (url == "schicksal.html" ||
+        url == "naehe.html" ||
+        url == "aehnlichkeit.html" ||
+        url == "geschlossenheit.html" ||
+        url == "praegnanz.html" ||
+        url == "fortsetzung.html") {
+      return <h1>Gesetz {this.getText()}</h1>;
+    } else {
+      return <h1>{this.getText()}</h1>;
+    }
   }
 }
