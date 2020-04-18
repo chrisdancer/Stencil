@@ -14,6 +14,6 @@ export class Text {
   
 
   render() {
-    return <p>{this.content}</p>;
+    return <p id="text">{this.content}</p>;
   }
 }

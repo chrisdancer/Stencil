@@ -13,6 +13,6 @@ export class MyWelcomeText {
   
 
   render() {
-    return <div>{this.content}</div>;
+    return <div id="welcome">{this.content}</div>;
   }
 }

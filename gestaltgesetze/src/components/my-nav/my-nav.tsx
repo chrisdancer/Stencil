@@ -21,8 +21,9 @@ export class MyNav {
           <li><a href="html\schicksal.html">Schicksal</a></li>
         </ul>
       </nav>
-
-
     </header>;
+    
+   
   }
+ 
 }
