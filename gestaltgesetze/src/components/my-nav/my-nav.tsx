@@ -11,12 +11,12 @@ export class MyNav {
 
 render() {
   // var link="";
-  // if (window.location.href=="html") {
-  //   link ="";
+  //if (window.location.href=="html") {
+   // link ="";
   // } else {
-  //   link ="..\\";
-  // }
-  // <li><a href= {link}"html">Start</a></li>
+   //link ="..\\";
+   //}
+   //<li><a href= {link}"html">Start</a></li>
   return <header>
   <nav>
     <ul class="navbar">
