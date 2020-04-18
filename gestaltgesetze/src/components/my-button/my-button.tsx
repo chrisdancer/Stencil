@@ -66,6 +66,6 @@ export class MyButton {
 
   render() {
     let buttonID:string = this.setButtonID();;
-    return <button type="button" class="button-style" id={buttonID} onClick={() => this.goToNextPage()}>{this.content}</button>;
+    return <button type="button" class="button-style" id={buttonID} onClick={this.goToNextPage}>{this.content}</button>;
   }
 }
