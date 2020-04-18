@@ -3,7 +3,7 @@ import { Component, Prop, h } from '@stencil/core';
 @Component({
   tag: 'my-text',
   styleUrl: 'my-text.css',
- 
+ shadow: true
 })
 export class Text {
   /**
