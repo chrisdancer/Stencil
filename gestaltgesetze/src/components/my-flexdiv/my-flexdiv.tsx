@@ -1,32 +1,14 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'my-flexdiv',
-  styleUrl: 'my-flexdiv.css',
+  tag: 'my-flexDiv',
+  styleUrl: 'my-flexDiv.css',
   shadow: true
 })
-export class MyFlexdiv {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
-  }
+export class MyFlexDiv {
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <div id="flexDiv"></div>;
   }
 }
