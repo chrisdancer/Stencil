@@ -1,7 +1,15 @@
-:host {
-  display: block;
+#footerDiv {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 5rem;
 }
 
-div {
-  color: red;
+#footerText {
+  margin-top: 2rem;
+  float: right;
+  margin-right: 10rem;
 }
