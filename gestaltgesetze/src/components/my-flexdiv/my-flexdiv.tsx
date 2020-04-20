@@ -1,14 +1,14 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'my-flexDiv',
-  styleUrl: 'my-flexDiv.css',
+  tag: 'my-flexdiv',
+  styleUrl: 'my-flexdiv.css',
   shadow: true
 })
 
-export class MyFlexDiv {
+export class MyFlexdiv {
 
   render() {
-    return <div id="flexDiv"></div>;
+    return <div id="flexdiv"><div class="item"></div></div>;
   }
 }
