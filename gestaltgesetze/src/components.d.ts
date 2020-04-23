@@ -24,18 +24,6 @@ export namespace Components {
         "middle": string;
     }
     interface MyFlexdiv {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
     interface MyFooter {
     }
@@ -153,18 +141,6 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface MyFlexdiv {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface MyFooter {
     }
