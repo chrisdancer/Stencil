@@ -7,7 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyButton {
-        "content": string;
     }
     interface MyComponent {
         /**
@@ -26,8 +25,6 @@ export namespace Components {
     interface MyFlexdiv {
     }
     interface MyFooter {
-    }
-    interface MyHead {
     }
     interface MyHeadline {
         "article": string;
@@ -73,12 +70,6 @@ declare global {
         prototype: HTMLMyFooterElement;
         new (): HTMLMyFooterElement;
     };
-    interface HTMLMyHeadElement extends Components.MyHead, HTMLStencilElement {
-    }
-    var HTMLMyHeadElement: {
-        prototype: HTMLMyHeadElement;
-        new (): HTMLMyHeadElement;
-    };
     interface HTMLMyHeadlineElement extends Components.MyHeadline, HTMLStencilElement {
     }
     var HTMLMyHeadlineElement: {
@@ -114,7 +105,6 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "my-flexdiv": HTMLMyFlexdivElement;
         "my-footer": HTMLMyFooterElement;
-        "my-head": HTMLMyHeadElement;
         "my-headline": HTMLMyHeadlineElement;
         "my-nav": HTMLMyNavElement;
         "my-subheadline": HTMLMySubheadlineElement;
@@ -124,7 +114,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MyButton {
-        "content"?: string;
     }
     interface MyComponent {
         /**
@@ -143,8 +132,6 @@ declare namespace LocalJSX {
     interface MyFlexdiv {
     }
     interface MyFooter {
-    }
-    interface MyHead {
     }
     interface MyHeadline {
         "article"?: string;
@@ -169,7 +156,6 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "my-flexdiv": MyFlexdiv;
         "my-footer": MyFooter;
-        "my-head": MyHead;
         "my-headline": MyHeadline;
         "my-nav": MyNav;
         "my-subheadline": MySubheadline;
@@ -185,7 +171,6 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-flexdiv": LocalJSX.MyFlexdiv & JSXBase.HTMLAttributes<HTMLMyFlexdivElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
-            "my-head": LocalJSX.MyHead & JSXBase.HTMLAttributes<HTMLMyHeadElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
             "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
             "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
