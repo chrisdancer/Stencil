@@ -20,7 +20,7 @@ export class MyHeadline {
 
   render() {
     let url = window.location.href;
-    let newString = url.replace(/(http\:\/\/localhost\:\d{4}\/html)(\/)(\w*\.html)/, "$3"); 
+    let newString = url.replace(/(.*)(\/html)(\/)(\w*\.html)/, "$4"); 
     url = newString;
 
     if (url == "schicksal.html" ||
