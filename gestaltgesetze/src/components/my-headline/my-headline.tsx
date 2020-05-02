@@ -7,6 +7,8 @@ import { formatHeadline } from '../../utils/utils';
   shadow: true
 })
 export class MyHeadline {
+  url;
+
   //article of the gestalt law
   @Prop() article: string;
 
@@ -18,17 +20,21 @@ export class MyHeadline {
     return formatHeadline(this.article, this.name);
   }
 
-  render() {
-    let url = window.location.href;
-    let newString = url.replace(/(http\:\/\/localhost\:\d{4}\/html)(\/)(\w*\.html)/, "$3"); 
-    url = newString;
+  private getURL(): string {
+    this.url = window.location.href;
+    return this.url;
+  }
 
-    if (url == "schicksal.html" ||
-        url == "naehe.html" ||
-        url == "aehnlichkeit.html" ||
-        url == "geschlossenheit.html" ||
-        url == "praegnanz.html" ||
-        url == "fortsetzung.html") {
+  render() {
+    this.getURL();
+    let urlTemp = this.url.replace(/(.*)(\/html)(\/)(\w*\.html)/, "$4"); 
+
+    if (urlTemp == "schicksal.html" ||
+        urlTemp == "naehe.html" ||
+        urlTemp == "aehnlichkeit.html" ||
+        urlTemp == "geschlossenheit.html" ||
+        urlTemp == "praegnanz.html" ||
+        urlTemp == "fortsetzung.html") {
       return <h1>Gesetz {this.getText()}</h1>;
     } else {
       return <h1>{this.getText()}</h1>;
