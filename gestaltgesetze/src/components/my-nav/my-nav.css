@@ -18,25 +18,25 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
-    background-color: black;
+    background-color: rgb(29, 28, 28);
 }
 
 .navbar{
     list-style: none;
-    background-color: black;
+    background-color: rgb(29, 28, 28);
 }
 
 .navbar li {
     display: inline-block;
     padding: 0px 20px;
-    background-color:black;
+    background-color:rgb(29, 28, 28);
 }
 
 .navbar li a{
     transition: all 0.3s ease 0s;
-    background-color: black;
+    background-color: rgb(29, 28, 28);
 }
 
 .navbar li a:hover{
-    color: #e2001a;
+    color:  #860d0d;
 }
