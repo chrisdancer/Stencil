@@ -24,3 +24,8 @@
 	text-decoration: none;
 	color: #FFF !important;
 }
+
+.buttonClass {
+	display: flex;
+	justify-content: center;
+}
