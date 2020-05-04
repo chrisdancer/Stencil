@@ -6,24 +6,23 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class MyTemplate {
-  getText;
   
 
   render() {
     return (
       <div>
-        <my-nav></my-nav>
-        <my-headline class="headline"></my-headline> 
-        <my-text class="defText" content="zusammenfassung zu gesetz"></my-text>
-        <my-subheadline class="sub"><slot></slot></my-subheadline>
-        <my-text class="text" content="erklärung zu bsp 1"></my-text>
-        <my-subheadline class="sub"></my-subheadline>
-        <my-text class="text" content="erklärung zu bsp 2"></my-text>
-        <my-subheadline class="sub"><slot></slot></my-subheadline>
-        <my-text class="text" content="erklärung zu bsp 3"></my-text>
-        <my-flexdiv></my-flexdiv>
-        <my-button></my-button>
-        <my-footer></my-footer>
+      <my-nav></my-nav>
+      <my-headline class="headline"></my-headline> 
+      <my-text def-text><slot></slot></my-text>
+      <my-subheadline class="sub">beisdpiuel</my-subheadline>
+      <my-text>uhwaduhwadhioafjpoiawdjpoawdpjoawd</my-text>
+      <my-subheadline class="sub">oawjdowadjowda</my-subheadline>
+      <my-text>wwwwwwww</my-text>
+      <my-subheadline class="sub">dwdw</my-subheadline>
+      <my-text>hgg</my-text>
+      <my-flexdiv></my-flexdiv>
+      <my-button></my-button>
+      <my-footer></my-footer>
       </div>
     )
   }

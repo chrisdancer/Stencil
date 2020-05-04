@@ -15,6 +15,6 @@ export class MySubheadline {
   // }
 
   render() {
-    return <h3><slot name="subheadline"></slot></h3>;
+    return <h3><slot></slot></h3>;
   }
 }

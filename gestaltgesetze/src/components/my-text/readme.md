@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute | Description    | Type     | Default     |
-| --------- | --------- | -------------- | -------- | ----------- |
-| `content` | `content` | The first name | `string` | `undefined` |
+| Property  | Attribute  | Description    | Type      | Default     |
+| --------- | ---------- | -------------- | --------- | ----------- |
+| `defText` | `def-text` | The first name | `boolean` | `undefined` |
 
 
 ## Dependencies

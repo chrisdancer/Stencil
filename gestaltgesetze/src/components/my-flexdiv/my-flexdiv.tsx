@@ -12,3 +12,10 @@ export class MyFlexdiv {
     return <div id="flexdiv"><div class="item"></div><div class="item"></div><div class="item"></div></div>;
   }
 }
+
+<my-flexdiv>
+  <item1>
+    
+  </item1>
+
+</my-flexdiv>

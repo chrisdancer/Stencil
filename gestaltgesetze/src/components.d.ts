@@ -26,7 +26,7 @@ export namespace Components {
         /**
           * The first name
          */
-        "content": string;
+        "defText": boolean;
     }
     interface MyWelcometext {
         "content": string;
@@ -120,7 +120,7 @@ declare namespace LocalJSX {
         /**
           * The first name
          */
-        "content"?: string;
+        "defText"?: boolean;
     }
     interface MyWelcometext {
         "content"?: string;

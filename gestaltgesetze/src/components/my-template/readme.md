@@ -27,6 +27,7 @@ graph TD;
   my-template --> my-flexdiv
   my-template --> my-button
   my-template --> my-footer
+  my-flexdiv --> my-flexdiv
   style my-template fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

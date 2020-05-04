@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-text',
@@ -11,11 +11,9 @@ export class Text {
    * The first name
    */
 
-  @Prop() content: string;
-
-  
+   @Prop() defText:boolean;
 
   render() {
-    return <p id="text"><slot name="text"></slot></p>;
+    return <p id="text" class={this.defText?"defText":"text"}><slot></slot></p>;
   }
 }
