@@ -13,14 +13,14 @@ export class MyTemplate {
     return (
       <div>
         <my-nav></my-nav>
-        <my-headline></my-headline> 
-        <my-text content="zusammenfassung zu gesetz"></my-text>
-        <my-subheadline><slot></slot></my-subheadline>
-        <my-text content="erklärung zu bsp 1"></my-text>
-        <my-subheadline></my-subheadline>
-        <my-text content="erklärung zu bsp 2"></my-text>
-        <my-subheadline><slot></slot></my-subheadline>
-        <my-text content="erklärung zu bsp 3"></my-text>
+        <my-headline class="headline"></my-headline> 
+        <my-text class="defText" content="zusammenfassung zu gesetz"></my-text>
+        <my-subheadline class="sub"><slot></slot></my-subheadline>
+        <my-text class="text" content="erklärung zu bsp 1"></my-text>
+        <my-subheadline class="sub"></my-subheadline>
+        <my-text class="text" content="erklärung zu bsp 2"></my-text>
+        <my-subheadline class="sub"><slot></slot></my-subheadline>
+        <my-text class="text" content="erklärung zu bsp 3"></my-text>
         <my-flexdiv></my-flexdiv>
         <my-button></my-button>
         <my-footer></my-footer>
