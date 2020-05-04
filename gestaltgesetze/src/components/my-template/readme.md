@@ -13,6 +13,7 @@
 - [my-headline](../my-headline)
 - [my-text](../my-text)
 - [my-subheadline](../my-subheadline)
+- [my-flexdiv](../my-flexdiv)
 - [my-button](../my-button)
 - [my-footer](../my-footer)
 
@@ -23,6 +24,7 @@ graph TD;
   my-template --> my-headline
   my-template --> my-text
   my-template --> my-subheadline
+  my-template --> my-flexdiv
   my-template --> my-button
   my-template --> my-footer
   style my-template fill:#f9f,stroke:#333,stroke-width:4px

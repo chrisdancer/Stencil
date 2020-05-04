@@ -19,7 +19,6 @@ export namespace Components {
     interface MyNav {
     }
     interface MySubheadline {
-        "content": string;
     }
     interface MyTemplate {
     }
@@ -114,7 +113,6 @@ declare namespace LocalJSX {
     interface MyNav {
     }
     interface MySubheadline {
-        "content"?: string;
     }
     interface MyTemplate {
     }

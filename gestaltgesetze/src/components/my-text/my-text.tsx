@@ -5,15 +5,17 @@ import { Component, Prop, h } from '@stencil/core';
   styleUrl: 'my-text.css',
  shadow: true
 })
+
 export class Text {
   /**
    * The first name
    */
+
   @Prop() content: string;
 
   
 
   render() {
-    return <p id="text">{this.content}</p>;
+    return <p id="text"><slot name="text"></slot></p>;
   }
 }
