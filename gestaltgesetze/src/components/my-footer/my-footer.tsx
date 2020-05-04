@@ -9,6 +9,12 @@ import { Component, h } from '@stencil/core';
 export class MyFooter {
 
   render() {
-    return <div id="footerDiv"><a href="html\impressum.html"><p id="footerText">Impressum</p></a></div>;
+    var link="";
+    if (window.location.href=="html") {
+     link ="";
+   } else {
+     link ="..\\";
+     }
+    return <div id="footerDiv"><a href={link + "html\\impressum.html"}><p id="footerText">Impressum</p></a></div>;
   }
 }
