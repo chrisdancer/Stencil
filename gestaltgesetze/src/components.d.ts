@@ -7,39 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyButton {
-        "content": string;
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
     interface MyFlexdiv {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
     interface MyFooter {
-    }
-    interface MyHead {
     }
     interface MyHeadline {
         "article": string;
@@ -49,6 +20,8 @@ export namespace Components {
     }
     interface MySubheadline {
         "content": string;
+    }
+    interface MyTemplate {
     }
     interface MyText {
         /**
@@ -67,12 +40,6 @@ declare global {
         prototype: HTMLMyButtonElement;
         new (): HTMLMyButtonElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLMyFlexdivElement extends Components.MyFlexdiv, HTMLStencilElement {
     }
     var HTMLMyFlexdivElement: {
@@ -84,12 +51,6 @@ declare global {
     var HTMLMyFooterElement: {
         prototype: HTMLMyFooterElement;
         new (): HTMLMyFooterElement;
-    };
-    interface HTMLMyHeadElement extends Components.MyHead, HTMLStencilElement {
-    }
-    var HTMLMyHeadElement: {
-        prototype: HTMLMyHeadElement;
-        new (): HTMLMyHeadElement;
     };
     interface HTMLMyHeadlineElement extends Components.MyHeadline, HTMLStencilElement {
     }
@@ -109,6 +70,12 @@ declare global {
         prototype: HTMLMySubheadlineElement;
         new (): HTMLMySubheadlineElement;
     };
+    interface HTMLMyTemplateElement extends Components.MyTemplate, HTMLStencilElement {
+    }
+    var HTMLMyTemplateElement: {
+        prototype: HTMLMyTemplateElement;
+        new (): HTMLMyTemplateElement;
+    };
     interface HTMLMyTextElement extends Components.MyText, HTMLStencilElement {
     }
     var HTMLMyTextElement: {
@@ -123,52 +90,22 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-button": HTMLMyButtonElement;
-        "my-component": HTMLMyComponentElement;
         "my-flexdiv": HTMLMyFlexdivElement;
         "my-footer": HTMLMyFooterElement;
-        "my-head": HTMLMyHeadElement;
         "my-headline": HTMLMyHeadlineElement;
         "my-nav": HTMLMyNavElement;
         "my-subheadline": HTMLMySubheadlineElement;
+        "my-template": HTMLMyTemplateElement;
         "my-text": HTMLMyTextElement;
         "my-welcometext": HTMLMyWelcometextElement;
     }
 }
 declare namespace LocalJSX {
     interface MyButton {
-        "content"?: string;
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface MyFlexdiv {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface MyFooter {
-    }
-    interface MyHead {
     }
     interface MyHeadline {
         "article"?: string;
@@ -178,6 +115,8 @@ declare namespace LocalJSX {
     }
     interface MySubheadline {
         "content"?: string;
+    }
+    interface MyTemplate {
     }
     interface MyText {
         /**
@@ -190,13 +129,12 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "my-button": MyButton;
-        "my-component": MyComponent;
         "my-flexdiv": MyFlexdiv;
         "my-footer": MyFooter;
-        "my-head": MyHead;
         "my-headline": MyHeadline;
         "my-nav": MyNav;
         "my-subheadline": MySubheadline;
+        "my-template": MyTemplate;
         "my-text": MyText;
         "my-welcometext": MyWelcometext;
     }
@@ -206,13 +144,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-flexdiv": LocalJSX.MyFlexdiv & JSXBase.HTMLAttributes<HTMLMyFlexdivElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
-            "my-head": LocalJSX.MyHead & JSXBase.HTMLAttributes<HTMLMyHeadElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
             "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
             "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
+            "my-template": LocalJSX.MyTemplate & JSXBase.HTMLAttributes<HTMLMyTemplateElement>;
             "my-text": LocalJSX.MyText & JSXBase.HTMLAttributes<HTMLMyTextElement>;
             "my-welcometext": LocalJSX.MyWelcometext & JSXBase.HTMLAttributes<HTMLMyWelcometextElement>;
         }

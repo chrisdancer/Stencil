@@ -5,12 +5,18 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Dependencies
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `content` | `content` |             | `string` | `undefined` |
+### Used by
 
+ - [my-template](../my-template)
+
+### Graph
+```mermaid
+graph TD;
+  my-template --> my-button
+  style my-button fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
