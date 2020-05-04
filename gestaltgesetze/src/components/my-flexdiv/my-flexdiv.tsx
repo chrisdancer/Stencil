@@ -9,6 +9,6 @@ import { Component, h } from '@stencil/core';
 export class MyFlexdiv {
 
   render() {
-    return <div id="flexdiv"><div class="item"></div></div>;
+    return <div id="flexdiv"></div>;
   }
 }

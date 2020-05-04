@@ -3,13 +3,23 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: rgb(29, 28, 28);
   color: white;
   height: 5rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: white;
 }
 
 #footerText {
   margin-top: 2rem;
   float: right;
   margin-right: 10rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: white;
 }
