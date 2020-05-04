@@ -35,7 +35,31 @@ export class MyHeadline {
         urlTemp == "geschlossenheit.html" ||
         urlTemp == "praegnanz.html" ||
         urlTemp == "fortsetzung.html") {
-      return <h1>Gesetz {this.getText()}</h1>;
+
+      //replace ae with ä
+      let name = urlTemp.replace(/(\w*)(\.html)/, "$1");
+
+      //make first letter of gestalt law uppercase
+      name = name[0].toUpperCase() + name.slice(1);
+
+      if (name.includes("ae")) {
+        name = name.replace(/(ae)/, "ä");
+      } else if (name.includes("Ae")) {
+        name = "Ähnlichkeit";
+      } else if (name == "Fortsetzung") {
+        name = "guten Fortsetzung";
+      }
+
+      //set article
+      let article;
+      if (urlTemp == "schicksal.html") {
+        article = "des";
+        name = "Schicksals";
+      } else {
+        article = "der";
+      }
+
+      return <h1>Gesetz {article} {name}</h1>;
     } else {
       return <h1>{this.getText()}</h1>;
     }
