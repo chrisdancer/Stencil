@@ -3,13 +3,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  width:30em;
-  height:18em;
-  margin-top: -9em;
-  margin-left: -14em;
 }
 
 .item {
