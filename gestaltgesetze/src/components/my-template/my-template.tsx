@@ -13,13 +13,13 @@ export class MyTemplate {
       <div>
       <my-nav></my-nav>
       <my-headline class="headline"></my-headline> 
-      <my-text class="def-text"><slot></slot></my-text>
+      <my-text def-text></my-text>
       <my-subheadline class="sub">beisdpiuel</my-subheadline>
-      <my-text class="def-text">uhwaduhwadhioafjpoiawdjpoawdpjoawd</my-text>
+      <my-text>uhwaduhwadhioafjpoiawdjpoawdpjoawd</my-text>
       <my-subheadline class="sub">oawjdowadjowda</my-subheadline>
-      <my-text class="def-text">wwwwwwww</my-text>
+      <my-text>wwwwwwww</my-text>
       <my-subheadline class="sub">dwdw</my-subheadline>
-      <my-text class="def-text">hgg</my-text>
+      <my-text>hgg</my-text>
       <my-flexdiv></my-flexdiv>
       <my-button></my-button>
       <my-footer></my-footer>
