@@ -9,8 +9,30 @@
 </head>
       
 <body>
-    <my-template></my-template>
-    <my-text content="Dinge, die sich mit ähnlicher Geschwindigkeit in eine Richtung bewegen, werden von unserer Wahrnehmung gruppiert, also als zusammengehörig aufgefasst."></my-text>
+  <my-nav></my-nav>
+  <my-headline class="headline"></my-headline> 
+  <!--komponente ändert sich noch mit anderem Styling-->
+  <my-welcometext content="Dinge, die sich mit ähnlicher Geschwindigkeit in eine Richtung bewegen, werden von unserer Wahrnehmung gruppiert, also als zusammengehörig aufgefasst."></my-welcometext>
+
+  <my-flexdiv>
+    <slot>
+      <div class="item" style="width: 25rem;">
+        <my-subheadline class="sub">Beispiel 1</my-subheadline>
+        <my-text>Beispiel 1 soll das Gesetz nochmal verdeutlichen. Hier ist die Bewegung in einem Bild statisch dargestellt. Trotzdem werden die Männchen mit Bewegung als zusammengehörig sowie die ohne oder mit wenig Bewegung als zusammengehörig wahrgenommen.</my-text>
+      </div>
+      <div class="item" style="margin-left: 5rem; width: 25rem;">
+        <my-subheadline class="sub">Beispiel 2</my-subheadline>
+        <my-text>Beispiel 2 wendet das Gesetzt nochmal praktisch an. Die Elemente die sich zusammen in die gleiche Richtung bewegen werden gruppiert wahrgenommen.</my-text>
+      </div>
+      <div class="item" style="margin-left: 5rem; width: 25rem; text-align: left;">
+        <my-subheadline class="sub">Beispiel 3</my-subheadline>
+        <my-text>In Beispiel 3 wird das Gesetz missachtet. Die einzelnen „Bälle“ bewegen sich willkürlich. Deshalb ist hier auch keine Zusammengehörigkeit erkennbar.</my-text>
+      </div>
+    </slot>
+  </my-flexdiv>
+  <my-button></my-button>
+  <my-footer></my-footer>
+   
    
   </body>
 </html>
