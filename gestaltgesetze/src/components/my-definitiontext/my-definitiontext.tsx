@@ -13,6 +13,6 @@ export class MyDefinitiontext {
   
 
   render() {
-    return <div id="welcome">{this.content}</div>;
+    return <div id="definition">{this.content}</div>;
   }
 }
