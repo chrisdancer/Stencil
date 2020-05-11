@@ -11,27 +11,27 @@
 <body>
     <my-nav></my-nav>
     <my-headline class="headline"></my-headline> 
-    <my-welcometext content="Wir gehen stets davon aus, dass Linien einem uns bekannten Weg folgen. Dies ist meist der einfachste Weg."></my-welcometext>
+    <my-definitiontext content="Wir gehen stets davon aus, dass Linien einem uns bekannten Weg folgen. Dies ist meist der einfachste Weg."></my-definitiontext>
     <my-flexdiv>
         <slot>
-          <div class="item" style="width: 25rem;">
-            <img src="../img/fortsetzung_1">
+          <my-imagebox-left>
+            <img src="img/fortsetzung_1.png" style="height:150px; width:auto">
             <my-subheadline class="sub">Beispiel</my-subheadline>
             <my-text>In der Grafik sehen wir neun Spalten von Kreisen. Wir sehen Spalten und keine Zeilen, weil die Elemente in der Vertikale näher zusammenliegen als in der Horizontalen.
             </my-text>
-          </div>
-          <div class="item" style="margin-left: 5rem; width: 25rem;">
-            <img src="../img/fortsetzung_2">
+          </my-imagebox-left>
+          <my-imagebox-middle>
+            <img src="img/fortsetzung_2.png" style="height:150px; width:auto">
             <my-subheadline class="sub"> Gesetz beachtet </my-subheadline>
             <my-text>Die Links sind in einer Spalte, also auf einer (gedachten) Geraden angeordnet. An der senkrechten Fluchtlinie entlang können sie sehr schnell gelesen und als zusammengehörig identifiziert werden.
             </my-text>
-          </div>
-          <div class="item" style="margin-left: 5rem; width: 25rem;">
-            <img src="../img/fortsetzung_3">
+          </my-imagebox-middle>
+          <my-imagebox-right>
+            <img src="img/fortsetzung_3.png" style="height:150px; width:auto">
             <my-subheadline class="sub"> Gesetz missachtet </my-subheadline>
             <my-text>	Die Links werden wie ein Fließtext umgebrochen. Sie erscheinen also ohne Systematik neben- und untereinander. Es gibt keine Linie, die einen optischen Zusammenhalt erzeugt.
             </my-text>
-          </div>
+          </my-imagebox-right>
       </slot>
     </my-flexdiv>
     <my-button></my-button>
