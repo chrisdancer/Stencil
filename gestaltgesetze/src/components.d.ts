@@ -19,12 +19,6 @@ export namespace Components {
         "article": string;
         "name": string;
     }
-    interface MyImageboxLeft {
-    }
-    interface MyImageboxMiddle {
-    }
-    interface MyImageboxRight {
-    }
     interface MyNav {
     }
     interface MySubheadline {
@@ -73,24 +67,6 @@ declare global {
         prototype: HTMLMyHeadlineElement;
         new (): HTMLMyHeadlineElement;
     };
-    interface HTMLMyImageboxLeftElement extends Components.MyImageboxLeft, HTMLStencilElement {
-    }
-    var HTMLMyImageboxLeftElement: {
-        prototype: HTMLMyImageboxLeftElement;
-        new (): HTMLMyImageboxLeftElement;
-    };
-    interface HTMLMyImageboxMiddleElement extends Components.MyImageboxMiddle, HTMLStencilElement {
-    }
-    var HTMLMyImageboxMiddleElement: {
-        prototype: HTMLMyImageboxMiddleElement;
-        new (): HTMLMyImageboxMiddleElement;
-    };
-    interface HTMLMyImageboxRightElement extends Components.MyImageboxRight, HTMLStencilElement {
-    }
-    var HTMLMyImageboxRightElement: {
-        prototype: HTMLMyImageboxRightElement;
-        new (): HTMLMyImageboxRightElement;
-    };
     interface HTMLMyNavElement extends Components.MyNav, HTMLStencilElement {
     }
     var HTMLMyNavElement: {
@@ -127,9 +103,6 @@ declare global {
         "my-flexdiv": HTMLMyFlexdivElement;
         "my-footer": HTMLMyFooterElement;
         "my-headline": HTMLMyHeadlineElement;
-        "my-imagebox-left": HTMLMyImageboxLeftElement;
-        "my-imagebox-middle": HTMLMyImageboxMiddleElement;
-        "my-imagebox-right": HTMLMyImageboxRightElement;
         "my-nav": HTMLMyNavElement;
         "my-subheadline": HTMLMySubheadlineElement;
         "my-template": HTMLMyTemplateElement;
@@ -150,12 +123,6 @@ declare namespace LocalJSX {
     interface MyHeadline {
         "article"?: string;
         "name"?: string;
-    }
-    interface MyImageboxLeft {
-    }
-    interface MyImageboxMiddle {
-    }
-    interface MyImageboxRight {
     }
     interface MyNav {
     }
@@ -179,9 +146,6 @@ declare namespace LocalJSX {
         "my-flexdiv": MyFlexdiv;
         "my-footer": MyFooter;
         "my-headline": MyHeadline;
-        "my-imagebox-left": MyImageboxLeft;
-        "my-imagebox-middle": MyImageboxMiddle;
-        "my-imagebox-right": MyImageboxRight;
         "my-nav": MyNav;
         "my-subheadline": MySubheadline;
         "my-template": MyTemplate;
@@ -198,9 +162,6 @@ declare module "@stencil/core" {
             "my-flexdiv": LocalJSX.MyFlexdiv & JSXBase.HTMLAttributes<HTMLMyFlexdivElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
-            "my-imagebox-left": LocalJSX.MyImageboxLeft & JSXBase.HTMLAttributes<HTMLMyImageboxLeftElement>;
-            "my-imagebox-middle": LocalJSX.MyImageboxMiddle & JSXBase.HTMLAttributes<HTMLMyImageboxMiddleElement>;
-            "my-imagebox-right": LocalJSX.MyImageboxRight & JSXBase.HTMLAttributes<HTMLMyImageboxRightElement>;
             "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
             "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
             "my-template": LocalJSX.MyTemplate & JSXBase.HTMLAttributes<HTMLMyTemplateElement>;
