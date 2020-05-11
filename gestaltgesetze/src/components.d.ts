@@ -8,9 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyButton {
     }
-    interface MyDefinitiontext {
-        "content": string;
-    }
     interface MyFlexdiv {
     }
     interface MyFooter {
@@ -48,12 +45,6 @@ declare global {
     var HTMLMyButtonElement: {
         prototype: HTMLMyButtonElement;
         new (): HTMLMyButtonElement;
-    };
-    interface HTMLMyDefinitiontextElement extends Components.MyDefinitiontext, HTMLStencilElement {
-    }
-    var HTMLMyDefinitiontextElement: {
-        prototype: HTMLMyDefinitiontextElement;
-        new (): HTMLMyDefinitiontextElement;
     };
     interface HTMLMyFlexdivElement extends Components.MyFlexdiv, HTMLStencilElement {
     }
@@ -123,7 +114,6 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-button": HTMLMyButtonElement;
-        "my-definitiontext": HTMLMyDefinitiontextElement;
         "my-flexdiv": HTMLMyFlexdivElement;
         "my-footer": HTMLMyFooterElement;
         "my-headline": HTMLMyHeadlineElement;
@@ -139,9 +129,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MyButton {
-    }
-    interface MyDefinitiontext {
-        "content"?: string;
     }
     interface MyFlexdiv {
     }
@@ -175,7 +162,6 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "my-button": MyButton;
-        "my-definitiontext": MyDefinitiontext;
         "my-flexdiv": MyFlexdiv;
         "my-footer": MyFooter;
         "my-headline": MyHeadline;
@@ -194,7 +180,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
-            "my-definitiontext": LocalJSX.MyDefinitiontext & JSXBase.HTMLAttributes<HTMLMyDefinitiontextElement>;
             "my-flexdiv": LocalJSX.MyFlexdiv & JSXBase.HTMLAttributes<HTMLMyFlexdivElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
