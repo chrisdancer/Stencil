@@ -7,10 +7,31 @@
   <title>Stencil Component Starter</title>
   <script type="module" src="../dist/gestaltgesetze/gestaltgesetze.js"></script>
 </head>
-         
-<body>
-    <my-template>
-    </my-template>
-</body>
+<body> 
+  <my-nav></my-nav>
+  <my-headline class="headline"></my-headline> 
+  <!--komponente ändert sich noch mit anderem Styling-->
+  <my-definitiontext content="Dinge, die ähnlich sind, werden von unserer Wahrnehmung gruppiert, also als zusammenfehörig aufgefasst. Umgekehrt werden Dinge, die sich in wichtigen Merkmalen unterscheiden, als voneinander getrennt oder unabhängig wahrgenommen."></my-welcometext>
+
+  <my-flexdiv>
+    <slot>
+      <div class="item" style="width: 25rem;">
+        <my-subheadline class="sub">Beispiel 1</my-subheadline>
+        <my-text>Eine Figur wird demnach so wahrgenommen, dass sie in einer möglichst einfachen Struktur resultiert (="Gute Gestalt"). Solche Prägnante Formen oder "gute Gestalten" sind beispielsweise ein Kreis, ein Dreieck oder ein Rechteck. Das sind einfach aufgebaute Gestalten, die uns im täglichen Leben begegnen. Diese haben wir in unserem Gedächtnis verinnerlicht und werden daher schnell wiedererkannt.</my-text>
+      </div>
+      <div class="item" style="margin-left: 5rem; width: 25rem;">
+        <my-subheadline class="sub">Beispiel 2</my-subheadline>
+        <my-text>Beim Beispiel oben rechts sehen sie wahrscheinlich einen Kreis und ein Rechteck, die sich überschneiden, wahr, obwohl eigentlich eine zusammenhängende schwarze Fläche gezeigt wird.</my-text>
+      </div>
+      <div class="item" style="margin-left: 5rem; width: 25rem; text-align: left;">
+        <my-subheadline class="sub">Beispiel 3</my-subheadline>
+        <my-text>In diesem Beispiel kann man sehen, wie das Gesetz nicht richtig ausgeführt wird. Die linken Fische sind zwar Fische, allerdings sind sie in ihrer Position nicht zuordnebar. Es sieht aus wie eine zufällige Anordnung eines Schwarms</my-text>
+      </div>
+    </slot>
+  </my-flexdiv>
+  <my-button></my-button>
+  <my-footer></my-footer>
+   
+  </body>
 
 </html>

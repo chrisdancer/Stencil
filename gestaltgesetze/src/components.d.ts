@@ -8,6 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyButton {
     }
+    interface MyDefinitiontext {
+        "content": string;
+    }
     interface MyFlexdiv {
     }
     interface MyFooter {
@@ -15,6 +18,12 @@ export namespace Components {
     interface MyHeadline {
         "article": string;
         "name": string;
+    }
+    interface MyImageboxLeft {
+    }
+    interface MyImageboxMiddle {
+    }
+    interface MyImageboxRight {
     }
     interface MyNav {
     }
@@ -39,6 +48,12 @@ declare global {
         prototype: HTMLMyButtonElement;
         new (): HTMLMyButtonElement;
     };
+    interface HTMLMyDefinitiontextElement extends Components.MyDefinitiontext, HTMLStencilElement {
+    }
+    var HTMLMyDefinitiontextElement: {
+        prototype: HTMLMyDefinitiontextElement;
+        new (): HTMLMyDefinitiontextElement;
+    };
     interface HTMLMyFlexdivElement extends Components.MyFlexdiv, HTMLStencilElement {
     }
     var HTMLMyFlexdivElement: {
@@ -56,6 +71,24 @@ declare global {
     var HTMLMyHeadlineElement: {
         prototype: HTMLMyHeadlineElement;
         new (): HTMLMyHeadlineElement;
+    };
+    interface HTMLMyImageboxLeftElement extends Components.MyImageboxLeft, HTMLStencilElement {
+    }
+    var HTMLMyImageboxLeftElement: {
+        prototype: HTMLMyImageboxLeftElement;
+        new (): HTMLMyImageboxLeftElement;
+    };
+    interface HTMLMyImageboxMiddleElement extends Components.MyImageboxMiddle, HTMLStencilElement {
+    }
+    var HTMLMyImageboxMiddleElement: {
+        prototype: HTMLMyImageboxMiddleElement;
+        new (): HTMLMyImageboxMiddleElement;
+    };
+    interface HTMLMyImageboxRightElement extends Components.MyImageboxRight, HTMLStencilElement {
+    }
+    var HTMLMyImageboxRightElement: {
+        prototype: HTMLMyImageboxRightElement;
+        new (): HTMLMyImageboxRightElement;
     };
     interface HTMLMyNavElement extends Components.MyNav, HTMLStencilElement {
     }
@@ -89,9 +122,13 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-button": HTMLMyButtonElement;
+        "my-definitiontext": HTMLMyDefinitiontextElement;
         "my-flexdiv": HTMLMyFlexdivElement;
         "my-footer": HTMLMyFooterElement;
         "my-headline": HTMLMyHeadlineElement;
+        "my-imagebox-left": HTMLMyImageboxLeftElement;
+        "my-imagebox-middle": HTMLMyImageboxMiddleElement;
+        "my-imagebox-right": HTMLMyImageboxRightElement;
         "my-nav": HTMLMyNavElement;
         "my-subheadline": HTMLMySubheadlineElement;
         "my-template": HTMLMyTemplateElement;
@@ -102,6 +139,9 @@ declare global {
 declare namespace LocalJSX {
     interface MyButton {
     }
+    interface MyDefinitiontext {
+        "content"?: string;
+    }
     interface MyFlexdiv {
     }
     interface MyFooter {
@@ -109,6 +149,12 @@ declare namespace LocalJSX {
     interface MyHeadline {
         "article"?: string;
         "name"?: string;
+    }
+    interface MyImageboxLeft {
+    }
+    interface MyImageboxMiddle {
+    }
+    interface MyImageboxRight {
     }
     interface MyNav {
     }
@@ -127,9 +173,13 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "my-button": MyButton;
+        "my-definitiontext": MyDefinitiontext;
         "my-flexdiv": MyFlexdiv;
         "my-footer": MyFooter;
         "my-headline": MyHeadline;
+        "my-imagebox-left": MyImageboxLeft;
+        "my-imagebox-middle": MyImageboxMiddle;
+        "my-imagebox-right": MyImageboxRight;
         "my-nav": MyNav;
         "my-subheadline": MySubheadline;
         "my-template": MyTemplate;
@@ -142,9 +192,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
+            "my-definitiontext": LocalJSX.MyDefinitiontext & JSXBase.HTMLAttributes<HTMLMyDefinitiontextElement>;
             "my-flexdiv": LocalJSX.MyFlexdiv & JSXBase.HTMLAttributes<HTMLMyFlexdivElement>;
             "my-footer": LocalJSX.MyFooter & JSXBase.HTMLAttributes<HTMLMyFooterElement>;
             "my-headline": LocalJSX.MyHeadline & JSXBase.HTMLAttributes<HTMLMyHeadlineElement>;
+            "my-imagebox-left": LocalJSX.MyImageboxLeft & JSXBase.HTMLAttributes<HTMLMyImageboxLeftElement>;
+            "my-imagebox-middle": LocalJSX.MyImageboxMiddle & JSXBase.HTMLAttributes<HTMLMyImageboxMiddleElement>;
+            "my-imagebox-right": LocalJSX.MyImageboxRight & JSXBase.HTMLAttributes<HTMLMyImageboxRightElement>;
             "my-nav": LocalJSX.MyNav & JSXBase.HTMLAttributes<HTMLMyNavElement>;
             "my-subheadline": LocalJSX.MySubheadline & JSXBase.HTMLAttributes<HTMLMySubheadlineElement>;
             "my-template": LocalJSX.MyTemplate & JSXBase.HTMLAttributes<HTMLMyTemplateElement>;
