@@ -1,0 +1,8 @@
+:host {
+    display: block;
+}
+
+#imageboxMiddle {
+    margin-left: 5rem; 
+    width: 25rem;
+}
