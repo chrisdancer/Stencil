@@ -5,13 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `contentSub` | `content-sub` |             | `string` | `undefined` |
-
-
 ## Dependencies
 
 ### Used by

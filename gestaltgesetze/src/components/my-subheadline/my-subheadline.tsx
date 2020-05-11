@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'my-subheadline',
@@ -7,9 +7,8 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class MySubheadline {
   content
-  @Prop() contentSub: string;
 
   render() {
-    return <h3>{this.contentSub}</h3>;
+    return <h3><slot></slot></h3>;
   }
 }
